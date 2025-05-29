@@ -1,0 +1,38 @@
+# Environment Settings
+gpu_id: '0'                     # (str) The id of GPU device(s).
+worker: 0                       # (int) The number of workers processing the data.
+use_gpu: True                   # (bool) Whether or not to use GPU.
+seed: 2023                      # (int) Random seed.
+dataset_dir: 'dataset/'         # (str) The path of input dataset.
+checkpoint_dir: 'output'         # (str) The path to save checkpoint file.
+show_progress: True             # (bool) Whether or not to show the progress bar of every epoch. 
+save_dataset: False             # (bool) Whether or not to save filtered dataset.
+dataset_save_path: ~            # (str) The path of saved dataset.
+save_dataloaders: False         # (bool) Whether or not save split dataloaders.
+dataloaders_save_path: ~        # (str) The path of saved dataloaders.
+log_wandb: False                # (bool) Whether or not to use Weights & Biases(W&B).
+wandb_project: 'recbole-QoS'        # (str) The project to conduct experiments in W&B.
+shuffle: True                   # (bool) Whether or not to shuffle the training data before each epoch.
+state: 'info'
+
+# Training Settings
+epochs: 1000                     # (int) The number of training epochs.
+train_batch_size: 512         # (int) The training batch size.
+learner: adam                   # (str) The name of used optimizer.
+learning_rate: 0.005           # (float) Learning rate.
+weight_decay: 0.0               # (float) The weight decay value (L2 penalty) for optimizers.
+eval_step: 1                    # (int) The number of training epochs before an evaluation on the valid dataset.
+stopping_step: 20               # (int) The threshold for validation-based early stopping.
+clip_grad_norm: ~               # (dict) The args of clip_grad_norm_ which will clip gradient norm of model. 
+loss_decimal_place: 4           # (int) The decimal place of training loss.
+require_pow: False              # (bool) Whether or not to perform power operation in EmbLoss.
+enable_amp: False               # (bool) Whether or not to use mixed precision training.
+enable_scaler: False            # (bool) Whether or not to use GradScaler in mixed precision training.
+split_ratio: 0.05            # (float) The ratio of splitting dataset.
+
+# Evaluation Settings
+metrics: ["rmse", "mae"]        # (list or str) Evaluation metrics.
+valid_metric_bigger: False       # (bool) Whether to take a bigger valid metric value as a better result.
+eval_batch_size: 4096           # (int) The evaluation batch size.
+valid_metric: "mae"
+metric_decimal_place: 4

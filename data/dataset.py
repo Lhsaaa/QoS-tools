@@ -86,13 +86,12 @@ class RecboleDataset(TorchDataset):
                 self.field2num[name][source] = self._count_unique(df, col)
 
         df.columns = new_columns
-
         return df
 
     def num(self, field, source):
         if field in self.field2num:
             return self.field2num[field].get(source, 0)
-        raise ValueError("")
+        raise ValueError(f"Field '{field}' with source '{source}' not found in field2num.")
 
     def _count_unique(self, df: pd.DataFrame, field_name: str):
         if field_name not in df:
@@ -279,3 +278,4 @@ class GeneralGraphDataset(RecboleDataset):
         edge_weight = norm_deg[edge_index[0]] * norm_deg[edge_index[1]]
 
         return edge_index, edge_weight
+

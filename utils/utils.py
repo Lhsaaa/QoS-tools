@@ -34,15 +34,7 @@ def ensure_dir(dir_path):
 
 
 def get_model(model_name):
-    r"""Automatically select model class based on model name
-
-    Args:
-        model_name (str): model name
-
-    Returns:
-        Recommender: model class
-    """
-
+    
     model_file_name = model_name.lower()
     model_module = None
     module_path = ".".join(["models.models", model_file_name])

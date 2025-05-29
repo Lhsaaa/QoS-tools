@@ -1,0 +1,176 @@
+[25-05-28 14:49:35] [INFO] 
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 2023
+checkpoint_dir = output
+show_progress = True
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+state = info
+
+Training Hyper Parameters:
+epochs = 1000
+train_batch_size = 512
+learner = adam
+learning_rate = 0.005
+weight_decay = 1e-07
+eval_step = 1
+stopping_step = 20
+clip_grad_norm = None
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+metrics = ['rmse', 'mae']
+valid_metric_bigger = False
+eval_batch_size = 4096
+valid_metric = mae
+metric_decimal_place = 4
+
+Dataset Hyper Parameters:
+field_separator = 	
+seq_separator =  
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+seq_len = None
+LABEL_FIELD = rt
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+
+Other Hyper Parameters: 
+worker = 0
+dataset_dir = dataset/
+wandb_project = recbole-QoS
+shuffle = True
+require_pow = True
+enable_amp = False
+enable_scaler = False
+split_ratio = 0.05
+embedding_size = 16
+n_layers = 4
+reg_weight = 1e-05
+nan_flag = -1
+MODEL_TYPE = <function Module.type at 0x000002657FE029D0>
+single_spec = True
+local_rank = 0
+device = cuda
+
+
+[25-05-28 14:49:36] [INFO] LightGCN(
+  (user_embedding): Embedding(339, 16)
+  (item_embedding): Embedding(5825, 16)
+  (gcn_conv): LightGCNConv(16)
+  (reg_loss): EmbLoss()
+  (loss): L1Loss()
+)
+Trainable parameters: 98624
+[25-05-28 14:49:38] [INFO] FLOPs: 0.0
+[25-05-28 14:49:38] [WARNING] The parameters [weight_decay] and [reg_weight] are specified simultaneously, which may lead to double regularization.
+[25-05-28 14:49:38] [INFO] epoch 0 training [time: 0.80s, train loss: 0.7132]
+[25-05-28 14:49:40] [INFO] epoch 0 evaluating [time: 1.83s, valid_score: 0.674000]
+[25-05-28 14:49:40] [INFO] valid result: 
+rmse : 1.9953    mae : 0.674
+[25-05-28 14:49:40] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:41] [INFO] epoch 1 training [time: 0.80s, train loss: 0.6298]
+[25-05-28 14:49:43] [INFO] epoch 1 evaluating [time: 1.87s, valid_score: 0.632900]
+[25-05-28 14:49:43] [INFO] valid result: 
+rmse : 1.9294    mae : 0.6329
+[25-05-28 14:49:43] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:44] [INFO] epoch 2 training [time: 0.73s, train loss: 0.5985]
+[25-05-28 14:49:45] [INFO] epoch 2 evaluating [time: 1.83s, valid_score: 0.613200]
+[25-05-28 14:49:45] [INFO] valid result: 
+rmse : 1.882    mae : 0.6132
+[25-05-28 14:49:45] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:46] [INFO] epoch 3 training [time: 0.74s, train loss: 0.5803]
+[25-05-28 14:49:48] [INFO] epoch 3 evaluating [time: 2.04s, valid_score: 0.600600]
+[25-05-28 14:49:48] [INFO] valid result: 
+rmse : 1.8446    mae : 0.6006
+[25-05-28 14:49:48] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:49] [INFO] epoch 4 training [time: 0.74s, train loss: 0.5670]
+[25-05-28 14:49:51] [INFO] epoch 4 evaluating [time: 1.91s, valid_score: 0.591100]
+[25-05-28 14:49:51] [INFO] valid result: 
+rmse : 1.8074    mae : 0.5911
+[25-05-28 14:49:51] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:52] [INFO] epoch 5 training [time: 1.00s, train loss: 0.5561]
+[25-05-28 14:49:54] [INFO] epoch 5 evaluating [time: 1.92s, valid_score: 0.583400]
+[25-05-28 14:49:54] [INFO] valid result: 
+rmse : 1.7771    mae : 0.5834
+[25-05-28 14:49:54] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:55] [INFO] epoch 6 training [time: 0.74s, train loss: 0.5468]
+[25-05-28 14:49:57] [INFO] epoch 6 evaluating [time: 2.00s, valid_score: 0.576800]
+[25-05-28 14:49:57] [INFO] valid result: 
+rmse : 1.7516    mae : 0.5768
+[25-05-28 14:49:57] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:49:57] [INFO] epoch 7 training [time: 0.65s, train loss: 0.5384]
+[25-05-28 14:49:59] [INFO] epoch 7 evaluating [time: 2.02s, valid_score: 0.571500]
+[25-05-28 14:49:59] [INFO] valid result: 
+rmse : 1.7324    mae : 0.5715
+[25-05-28 14:49:59] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:00] [INFO] epoch 8 training [time: 0.72s, train loss: 0.5316]
+[25-05-28 14:50:02] [INFO] epoch 8 evaluating [time: 1.92s, valid_score: 0.567400]
+[25-05-28 14:50:02] [INFO] valid result: 
+rmse : 1.7178    mae : 0.5674
+[25-05-28 14:50:02] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:03] [INFO] epoch 9 training [time: 0.68s, train loss: 0.5257]
+[25-05-28 14:50:04] [INFO] epoch 9 evaluating [time: 1.86s, valid_score: 0.564000]
+[25-05-28 14:50:04] [INFO] valid result: 
+rmse : 1.7    mae : 0.564
+[25-05-28 14:50:04] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:05] [INFO] epoch 10 training [time: 0.64s, train loss: 0.5208]
+[25-05-28 14:50:07] [INFO] epoch 10 evaluating [time: 1.80s, valid_score: 0.561200]
+[25-05-28 14:50:07] [INFO] valid result: 
+rmse : 1.6875    mae : 0.5612
+[25-05-28 14:50:07] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:08] [INFO] epoch 11 training [time: 0.65s, train loss: 0.5166]
+[25-05-28 14:50:10] [INFO] epoch 11 evaluating [time: 2.00s, valid_score: 0.558700]
+[25-05-28 14:50:10] [INFO] valid result: 
+rmse : 1.678    mae : 0.5587
+[25-05-28 14:50:10] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:10] [INFO] epoch 12 training [time: 0.69s, train loss: 0.5127]
+[25-05-28 14:50:12] [INFO] epoch 12 evaluating [time: 1.85s, valid_score: 0.556500]
+[25-05-28 14:50:12] [INFO] valid result: 
+rmse : 1.6677    mae : 0.5565
+[25-05-28 14:50:12] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:13] [INFO] epoch 13 training [time: 0.68s, train loss: 0.5087]
+[25-05-28 14:50:15] [INFO] epoch 13 evaluating [time: 1.80s, valid_score: 0.553800]
+[25-05-28 14:50:15] [INFO] valid result: 
+rmse : 1.6642    mae : 0.5538
+[25-05-28 14:50:15] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:15] [INFO] epoch 14 training [time: 0.78s, train loss: 0.5043]
+[25-05-28 14:50:17] [INFO] epoch 14 evaluating [time: 1.76s, valid_score: 0.551200]
+[25-05-28 14:50:17] [INFO] valid result: 
+rmse : 1.6546    mae : 0.5512
+[25-05-28 14:50:17] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:18] [INFO] epoch 15 training [time: 0.67s, train loss: 0.4990]
+[25-05-28 14:50:20] [INFO] epoch 15 evaluating [time: 1.92s, valid_score: 0.547400]
+[25-05-28 14:50:20] [INFO] valid result: 
+rmse : 1.6571    mae : 0.5474
+[25-05-28 14:50:20] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:21] [INFO] epoch 16 training [time: 0.80s, train loss: 0.4929]
+[25-05-28 14:50:22] [INFO] epoch 16 evaluating [time: 1.82s, valid_score: 0.542900]
+[25-05-28 14:50:22] [INFO] valid result: 
+rmse : 1.6506    mae : 0.5429
+[25-05-28 14:50:22] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:23] [INFO] epoch 17 training [time: 0.70s, train loss: 0.4855]
+[25-05-28 14:50:25] [INFO] epoch 17 evaluating [time: 1.83s, valid_score: 0.537700]
+[25-05-28 14:50:25] [INFO] valid result: 
+rmse : 1.649    mae : 0.5377
+[25-05-28 14:50:25] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:26] [INFO] epoch 18 training [time: 0.67s, train loss: 0.4772]
+[25-05-28 14:50:27] [INFO] epoch 18 evaluating [time: 1.83s, valid_score: 0.531600]
+[25-05-28 14:50:27] [INFO] valid result: 
+rmse : 1.6457    mae : 0.5316
+[25-05-28 14:50:27] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth
+[25-05-28 14:50:28] [INFO] epoch 19 training [time: 0.67s, train loss: 0.4680]
+[25-05-28 14:50:30] [INFO] epoch 19 evaluating [time: 1.92s, valid_score: 0.525500]
+[25-05-28 14:50:30] [INFO] valid result: 
+rmse : 1.6408    mae : 0.5255
+[25-05-28 14:50:30] [INFO] Saving current: output\LightGCN-May-28-2025_14-49-38.pth

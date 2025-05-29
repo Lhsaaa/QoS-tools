@@ -37,7 +37,7 @@ class Config(object):
         self.variable_config_dict = self._load_variable_config_dict(config_dict)
         self.cmd_config_dict = self._load_cmd_line()
         
-        self._merge_external_config_dict()
+        self._merge_external_config_dict()  
 
         self.model, self.model_class, self.dataset = self._get_model_and_dataset(
             model, dataset
